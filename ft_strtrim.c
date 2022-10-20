@@ -6,7 +6,7 @@
 /*   By: takonaga <takonaga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 21:26:50 by takonaga          #+#    #+#             */
-/*   Updated: 2022/10/18 16:38:35 by takonaga         ###   ########.fr       */
+/*   Updated: 2022/10/21 07:25:32 by takonaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	while (len > i && ft_checker(s1[len - 1], set))
 		len--;
-	str = (char *)malloc(sizeof(char) * (len - i + 1));
+	str = malloc(sizeof(char) * (len - i + 1));
 	if (str == NULL)
 		return (NULL);
 	while (i < len)

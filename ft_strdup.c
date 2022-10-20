@@ -6,7 +6,7 @@
 /*   By: takonaga <takonaga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 07:19:00 by takonaga          #+#    #+#             */
-/*   Updated: 2022/10/16 01:59:16 by takonaga         ###   ########.fr       */
+/*   Updated: 2022/10/21 07:23:58 by takonaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s1)
 	if (s1 == NULL)
 		return (NULL);
 	s1_len = (ft_strlen(s1));
-	dest = (char *)malloc(s1_len + 1);
+	dest = malloc(s1_len + 1);
 	if (dest == NULL)
 		return (NULL);
 	ft_strlcpy(dest, s1, s1_len + 1);

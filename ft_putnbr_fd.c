@@ -6,7 +6,7 @@
 /*   By: takonaga <takonaga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 05:30:39 by takonaga          #+#    #+#             */
-/*   Updated: 2022/10/20 05:50:42 by takonaga         ###   ########.fr       */
+/*   Updated: 2022/10/21 07:36:58 by takonaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	ft_putnbr_fd(int n, int fd)
 	int_n = n;
 	if (int_n < 0)
 	{
-		ft_putchar_fb('-', fd);
-		int_n *= 1;
+		ft_putchar_fd('-', fd);
+		int_n *= -1;
 	}
 	if (int_n < 10)
 	{
