@@ -6,7 +6,7 @@
 /*   By: takonaga <takonaga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 23:40:22 by takonaga          #+#    #+#             */
-/*   Updated: 2022/10/20 04:54:28 by takonaga         ###   ########.fr       */
+/*   Updated: 2022/10/21 06:06:02 by takonaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static size_t	digits_count(long tmp)
 	return (count);
 }
 
-void	calculation(long tmp, char *ret, size_t count, size_t *cycle)
+static void	calculation(long tmp, char *ret, size_t count, size_t *cycle)
 {
 	int64_t	s1;
 	int64_t	s2;
@@ -56,7 +56,9 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		tmp = -tmp;
 	count = digits_count(tmp);
-		ret = (char *)ft_calloc(count +2, sizeof(char));
+	if (n < 0)
+		count++;
+	ret = (char *)ft_calloc(count +1, sizeof(char));
 	if (ret == NULL)
 		return (NULL);
 	if (n < 0)
