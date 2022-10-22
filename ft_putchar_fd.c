@@ -6,7 +6,7 @@
 /*   By: takonaga <takonaga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 05:14:43 by takonaga          #+#    #+#             */
-/*   Updated: 2022/10/20 05:23:11 by takonaga         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:05:23 by takonaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, c);
+	write(fd, &c, 1);
 }

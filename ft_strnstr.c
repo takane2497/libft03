@@ -6,7 +6,7 @@
 /*   By: takonaga <takonaga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:00:13 by takonaga          #+#    #+#             */
-/*   Updated: 2022/10/17 20:31:58 by takonaga         ###   ########.fr       */
+/*   Updated: 2022/10/22 17:04:03 by takonaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,22 @@
 
 char	*ft_strnstr(const char *str, const char *seek, size_t len)
 {
-	size_t	i;
-	size_t	j;
 	size_t	seek_len;
+	size_t	i;
 
-	if (len == 0 && seek != NULL)
+	if (str == NULL || seek == NULL)
 		return (NULL);
+	if (*seek == '\0')
+		return ((char *)str);
 	seek_len = ft_strlen(seek);
 	i = 0;
-	while (i < len && str[i] != '\0')
+	while (str[i] != '\0' && i + seek_len <= len)
 	{
-		j = 0;
-		while (j < seek_len && (i + j) < len)
-		{
-			if (str[i + j] != seek[j])
-				break ;
-			j++;
-		}
-		if (j == seek_len)
+		if (!(ft_strncmp(&str[i], seek, seek_len)))
 			return ((char *)&str[i]);
 		i++;
 	}
-	return ((char *)str);
+	return (NULL);
 }
 
 // int main(void)

@@ -6,7 +6,7 @@
 /*   By: takonaga <takonaga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 23:49:35 by takonaga          #+#    #+#             */
-/*   Updated: 2022/10/10 06:39:17 by takonaga         ###   ########.fr       */
+/*   Updated: 2022/10/22 17:17:33 by takonaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,17 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	i;
+	size_t	d_len;
+	size_t	s_len;
 
-	dst_len = ft_strlen(dst);
-	src_len = ft_strlen(src);
-	i = 0;
-	if (dstsize <= dst_len)
-		return (src_len + dstsize);
-	while (src[i] != '\0' && (dst_len + i) < (dstsize - 1))
-	{
-		dst[dst_len + i] = src[i];
-		i++;
-	}
-	dst[dst_len + i] = '\0';
-	return (src_len + dst_len);
+	s_len = ft_strlen(src);
+	if (dst == NULL)
+		return (s_len);
+	d_len = ft_strlen(dst);
+	if (dstsize <= d_len)
+		return (s_len + dstsize);
+	ft_strlcpy(&dst[d_len], src, dstsize - d_len);
+	return (d_len + s_len);
 }
 
 // int	main(void)

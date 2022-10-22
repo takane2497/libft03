@@ -6,21 +6,11 @@
 /*   By: takonaga <takonaga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 08:18:54 by takonaga          #+#    #+#             */
-/*   Updated: 2022/10/16 06:08:53 by takonaga         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:35:26 by takonaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	converter(int n)
-{
-	if (n == 0)
-		return (0);
-	else if (n > 0)
-		return (1);
-	else
-		return (-1);
-}
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -31,7 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	while (s1[i] != '\0' && s1[i] != '\0' && s1[i] == s2[i] && i < n - 1)
 		i++;
-	return (converter((unsigned char)s1[i] - (unsigned char)s2[i]));
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
 
 // int main(void)

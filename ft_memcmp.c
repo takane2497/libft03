@@ -6,21 +6,11 @@
 /*   By: takonaga <takonaga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 21:32:56 by takonaga          #+#    #+#             */
-/*   Updated: 2022/10/16 08:14:38 by takonaga         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:33:05 by takonaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	converter(int n)
-{
-	if (n == 0)
-		return (0);
-	else if (n > 0)
-		return (1);
-	else
-		return (-1);
-}
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -35,7 +25,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	while (i < n - 1 && *(str1 + i) == *(str2 + i))
 		++i;
-	return (converter(*(str1 + i) - *(str2 + i)));
+	return (*(str1 + i) - *(str2 + i));
 }
 
 // int main()
