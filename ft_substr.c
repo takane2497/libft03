@@ -6,7 +6,7 @@
 /*   By: takonaga <takonaga@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 02:07:50 by takonaga          #+#    #+#             */
-/*   Updated: 2022/10/22 18:05:23 by takonaga         ###   ########.fr       */
+/*   Updated: 2022/10/22 18:23:22 by takonaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr = (char *)malloc(sizeof(char) * len);
 	if (substr == NULL)
 		return (NULL);
-		ft_strlcpy(substr, s + start, len);
+	ft_strlcpy(substr, s + start, len);
 	return (substr);
 }
